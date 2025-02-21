@@ -18,5 +18,4 @@ public class SpringIntro2Application {
 		logger.debug("Checking context: {}", context.getBean(MyController.class));
 		logger.debug("\n*** Example using @Autowire on property ***");
 	}
-
 }
