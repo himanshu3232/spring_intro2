@@ -36,9 +36,4 @@ public class EmployeeBean {
     public void setEmpName(String empName) {
         this.empName = empName;
     }
-
-    @Override
-    public String toString(){
-        return "Name : " + empName + ", id: " + empId;
-    }
 }
