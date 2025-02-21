@@ -1,6 +1,7 @@
 package com.capgemini.spring_intro2;
 
 import com.capgemini.spring_intro2.controller.MyController;
+import com.capgemini.spring_intro2.service.EmployeeBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
@@ -17,5 +18,9 @@ public class SpringIntro2Application {
 		ApplicationContext context = SpringApplication.run(SpringIntro2Application.class, args);
 		logger.debug("Checking context: {}", context.getBean(MyController.class));
 		logger.debug("\n*** Example using @Autowire on property ***");
+		EmployeeBean employeeBean = context.getBean(EmployeeBean.class);
+		employeeBean.setEmpId(100);
+		employeeBean.setEmpName("Rohit");
+		employeeBean.showDetails();
 	}
 }
