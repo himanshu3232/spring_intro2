@@ -36,4 +36,11 @@ public class EmployeeBean {
     public void setEmpName(String empName) {
         this.empName = empName;
     }
+
+    public void showDetails(){
+        logger.debug("Emp id: {}", empId);
+        logger.debug("Emp name : {}", empName);
+        departmentBean.setDepartmentName("Information Technology");
+        logger.debug("Department name: {}", departmentBean.getDepartmentName());
+    }
 }
